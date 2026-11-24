@@ -5,9 +5,9 @@ using UnityEngine;
 namespace BehaviorTree
 {
 
-    public class BlackBoardTEst : MonoBehaviour
+    public class BlackBoardTEst
     {
-        private Dictionary<string, object> _data;
+        private Dictionary<string, object> _data = new();
 
         public bool TryGetValue<T>(string Query , ref T Result)
         {

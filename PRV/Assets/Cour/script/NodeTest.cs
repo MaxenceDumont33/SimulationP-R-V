@@ -11,7 +11,7 @@ namespace BehaviorTree
         FAILURE
 
     }
-    public class NodeTest : MonoBehaviour
+    public class NodeTest
     {
         protected NodeState state;
 

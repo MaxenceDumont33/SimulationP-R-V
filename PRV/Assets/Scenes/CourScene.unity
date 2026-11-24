@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 1427419733}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,7 +538,7 @@ Transform:
   m_GameObject: {fileID: 1427419732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.42, y: 0.29, z: 80.35329}
+  m_LocalPosition: {x: 63.06, y: 0.29, z: 69.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -718,10 +718,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6493089994201728865, guid: 51cee163be474a443bbe5f5149d0f207, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1427419732}
     - target: {fileID: 9049749070905434775, guid: 51cee163be474a443bbe5f5149d0f207, type: 3}
       propertyPath: m_Name
       value: Entities

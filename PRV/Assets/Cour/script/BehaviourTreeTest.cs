@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace BehaviorTree
@@ -7,19 +8,27 @@ namespace BehaviorTree
         private NodeTest _root = null;
         private BlackBoardTEst bB;
 
+        public float TickInterval = 1f;
+
         protected void Start()
         {
             bB = new();
+            GameObject self = gameObject;
+            bB.SetValue<GameObject>("gameObject", ref self);
             _root = SetupTree(ref bB);
+            StartCoroutine(UpdateBT());
         }
 
-        private void Update()
+
+        protected abstract NodeTest SetupTree(ref BlackBoardTEst blackBoard);
+
+        IEnumerator UpdateBT()
         {
-            if (_root != null)
+            while(_root != null)
+            {
                 _root.Evaluate();
-            
+                yield return new WaitForSeconds(TickInterval);
+            }
         }
-
-        protected abstract NodeTest SetupTree(ref BlackBoardTEst blacBoard);
     }  
 }
